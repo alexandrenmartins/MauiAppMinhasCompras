@@ -94,5 +94,27 @@ Repositório do projeto do CRUD no SQLite usando .NET MAUI
 - 30:21 Enviando alterações para GitHub
 - 31:08 Conclusão da Aula
 
+### VIDEOAULA 6: CRIANDO APLICATIVOS COM .NET MAUI - CRUD NO SQLITE PARA ANDROID - PARTE VI (32mim):
+- 00:00 Introdução
+- 01:49 Definindo emulador Always on Top
+- 02:30 Ajustando a Navegação de Tela
+- 04:37 Definindo o R$ no XAML
+- 06:26 Definindo o ```CurrentCulture``` para R$
+- 08:46 Implementando o PullToRefresh
+- 09:56 Propriedade ```IsPullToRefresh``` na ```ListView```
+- 10:21 Implementando evento ```Refreshing``` da ```ListView```
+- 12:38 Instrução ```Finally``` do laço ```Try Catch```
+- 13:20 Propriedade ```IsRefreshing``` da ```LisView```
+- 14:41 Ajustando o loading dos métodos
+- 18:07 Trocando ```VerticalStackLayout``` por ```StackLayout```
+- 19:29 Melhorando visual da ```ListView``` com ```Frame```
+- 21:11 Ajustando a ```Margin``` da ```SearchBar```
+- 21:40 Melhorando a apresentação da ```ListView```
+- 22:51 Melhorando o ```Header``` da ```ListView```
+- 25:01 Ajustando a posição do texto na ```ListView```
+- 26:40 Melhorando a formatação da ```NavigationPage```
+- 28:46 Como ajustar a ```SplashScreen``` e ```AppIcon```
+- 31:00 Enviando atualizações para o Github
+
 ## CURTIU MEU TRABALHO?
 Você pode me ajudar com um pix para tiago@tiago.blog.br 🍻
