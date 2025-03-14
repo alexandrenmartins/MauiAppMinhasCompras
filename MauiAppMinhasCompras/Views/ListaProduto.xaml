@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppMinhasCompras.Views.ListaProduto"
-             Title="Minhas Compras">
+<ContentPage
+    x:Class="MauiAppMinhasCompras.Views.ListaProduto"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Minhas Compras">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1" />
-        <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Clicked="ToolbarItem_Clicked_1" Text="Somar" />
+        <ToolbarItem Clicked="ToolbarItem_Clicked" Text="Adicionar" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
@@ -16,36 +17,59 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout>
-        <SearchBar x:Name="txt_search"
-                   Margin="-15, 0, 0, 0"
-                   Placeholder="Busca de Produtos"
-                   TextChanged="txt_search_TextChanged"/>
-        
-        <Frame Padding="0" Margin="10" VerticalOptions="FillAndExpand">
-            <ListView x:Name="lst_produtos"
-                  IsPullToRefreshEnabled="True"
-                  Refreshing="lst_produtos_Refreshing"
-                  ItemSelected="lst_produtos_ItemSelected">
+        <SearchBar
+            x:Name="txt_search"
+            Margin="10,0,10,0"
+            Placeholder="Busca de Produtos"
+            TextChanged="txt_search_TextChanged" />
+
+        <Frame
+            Margin="10"
+            Padding="0"
+            VerticalOptions="FillAndExpand">
+            <ListView
+                x:Name="lst_produtos"
+                IsPullToRefreshEnabled="True"
+                ItemSelected="lst_produtos_ItemSelected"
+                Refreshing="lst_produtos_Refreshing">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="30, 100, 80, 50, 90"
-                          BackgroundColor="{StaticResource Gray100}">
-                        <Label Grid.Column="0" Text="ID" Padding="5" FontAttributes="Bold" />
-                        <Label Grid.Column="1" Text="Descrição" FontAttributes="Bold" />
-                        <Label Grid.Column="2" Text="Preço" FontAttributes="Bold" />
-                        <Label Grid.Column="3" Text="Qnt" FontAttributes="Bold" />
-                        <Label Grid.Column="4" Text="Total" FontAttributes="Bold" />
+                    <Grid BackgroundColor="{StaticResource Gray100}" ColumnDefinitions="30, 100, 80, 50, 90">
+                        <Label
+                            Grid.Column="0"
+                            Padding="5"
+                            FontAttributes="Bold"
+                            Text="ID" />
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            Text="Descrição" />
+                        <Label
+                            Grid.Column="2"
+                            FontAttributes="Bold"
+                            Text="Preço" />
+                        <Label
+                            Grid.Column="3"
+                            FontAttributes="Bold"
+                            Text="Qnt" />
+                        <Label
+                            Grid.Column="4"
+                            FontAttributes="Bold"
+                            Text="Total" />
                     </Grid>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
+                                <MenuItem Clicked="MenuItem_Clicked" Text="Remover" />
                             </ViewCell.ContextActions>
                             <Grid ColumnDefinitions="30, 100, 80, 50, 90">
-                                <Label Grid.Column="0" Text="{Binding Id}" Padding="5" />
+                                <Label
+                                    Grid.Column="0"
+                                    Padding="5"
+                                    Text="{Binding Id}" />
                                 <Label Grid.Column="1" Text="{Binding Descricao}" />
                                 <Label Grid.Column="2" Text="{Binding Preco, StringFormat='{}{0:c}'}" />
                                 <Label Grid.Column="3" Text="{Binding Quantidade}" />

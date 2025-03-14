@@ -34,5 +34,13 @@ namespace MauiAppMinhasCompras
             //MainPage = new AppShell();
             MainPage = new NavigationPage(new Views.ListaProduto());
         }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var window = base.CreateWindow(activationState);
+            window.Width = 450;
+            window.Height = 600;
+            return window;
+        }
     }
 }
